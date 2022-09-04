@@ -27,15 +27,10 @@ function reverseArr(arr) {
 }
 
 function insertAt(arr,index,value){
-    temp1 = arr[0]
-    temp2 = arr[arr.length - 1]
-    temp3 = arr[index -1]
-    for(var i = arr.length - 1; i> index; i--){
+    for(var i = arr.length; i>= index; i--){
         arr[i] = arr[i - 1]
     }
     arr[index] = value
-    arr.push(temp2)
-    arr[0] = temp1
     return arr
 }
 
