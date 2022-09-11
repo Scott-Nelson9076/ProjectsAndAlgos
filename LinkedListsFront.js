@@ -44,6 +44,18 @@ class LinkedList {
         let val = this.head.data
         return val;
     }
+
+    contains(val){
+        let runner = this.head;
+        while(runner !== null){
+            if(runner.data === val){
+                return true;
+            }
+            else {
+                runner = runner.next;
+            }
+        }
+    }
 }
 
 let sll1 = new LinkedList();
@@ -55,3 +67,4 @@ console.log(sll1.front());
 
 console.log(sll1);
 console.log(sll1.length())
+console.log(sll1.contains(10))
