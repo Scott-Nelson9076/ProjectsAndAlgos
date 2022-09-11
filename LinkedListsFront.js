@@ -56,6 +56,16 @@ class LinkedList {
             }
         }
     }
+
+    display(){
+        let runner = this.head;
+        let stringy = "";
+        while(runner !== null){
+            stringy = stringy + runner.data + ","
+            runner = runner.next
+        }
+        return stringy;
+    }
 }
 
 let sll1 = new LinkedList();
@@ -68,3 +78,4 @@ console.log(sll1.front());
 console.log(sll1);
 console.log(sll1.length())
 console.log(sll1.contains(10))
+console.log(sll1.display())
